@@ -1,3 +1,4 @@
+
 class BankAccount {
 
     protected final String accountNumber;
@@ -20,7 +21,7 @@ class BankAccount {
 
     public void withdraw(double amount) {
         if (balance < amount) {
-            System.out.println("Cannot withdraw $" + amount + " due to insufficient funds.");
+            System.out.println("Cannot withdraw $" + amount + " cuz No money..");
             return;
         }
         balance -= amount;
@@ -48,7 +49,7 @@ class SavingsAccount extends BankAccount {
 
     @Override
     public void withdraw(double amount) {
-        if (balance - amount < 100) {
+        if (balance - amount <= 100) {
             System.out.println("Cannot withdraw $" + amount + " (Minimum balance of $100 required)");
             return;
         }
